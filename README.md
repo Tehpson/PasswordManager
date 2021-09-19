@@ -7,7 +7,6 @@
 Click [here](https://github.com/Tehpson/PasswordManager/releases/download/V0.1.0/PasswordManager.0.1.0.rar) to download the latest Version
 (This is just the program and not the open source)
 ## Plans for futher
-* Graphic
 * Export Password file
 * Import Password file
 * Remove Password file

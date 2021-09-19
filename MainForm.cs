@@ -10,8 +10,10 @@
 
     public partial class MainForm : Form
     {
-        public MainForm()
+        private Form1 Loginform { get; set; }
+        public MainForm(Form1 form1)
         {
+            Loginform = form1;
             InitializeComponent();
             FillCombBox();
         }
@@ -29,9 +31,14 @@
             FillCombBox();
         }
 
-        private void getPWDbtn_Click(object sender, EventArgs e)
+        private void GetPWDbtn_Click(object sender, EventArgs e)
         {
             getPWDtbx.Text = Functions.Hashing.DecryptPasswordOwn((Models.Data)getPWDDroppDown.SelectedItem);
+        }
+
+        private void MainForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Loginform.Close();
         }
     }
 }

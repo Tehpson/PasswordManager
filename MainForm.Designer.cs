@@ -63,7 +63,7 @@
             this.getPWDbtn.TabIndex = 3;
             this.getPWDbtn.Text = "Get password";
             this.getPWDbtn.UseVisualStyleBackColor = true;
-            this.getPWDbtn.Click += new System.EventHandler(this.getPWDbtn_Click);
+            this.getPWDbtn.Click += new System.EventHandler(this.GetPWDbtn_Click);
             // 
             // getPWDtbx
             // 
@@ -140,6 +140,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Password Manager";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
             this.getPwdBox.ResumeLayout(false);
             this.getPwdBox.PerformLayout();
             this.genreatePwdBox.ResumeLayout(false);

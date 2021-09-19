@@ -26,7 +26,7 @@
                 var PasswordSuccsesfull = Functions.Hashing.VerifyPasswordBcrypt(masterPasswordtbx.Text, masterPWD);
                 if (PasswordSuccsesfull)
                 {
-                    using var mainfrom = new MainForm();
+                    using var mainfrom = new MainForm(this);
                     this.Hide();
                     mainfrom.ShowDialog();
                 }
@@ -60,8 +60,8 @@
                 }
                 else
                 {
-                    using var mainfrom = new MainForm();
-                    this.Hide();
+                    using var mainfrom = new MainForm(this);
+                    Hide();
                     mainfrom.ShowDialog();
                 }
             }
